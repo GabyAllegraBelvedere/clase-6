@@ -1,3 +1,4 @@
+
 describe('Formulario de Registro', () => {
   beforeEach(() => {
     cy.visit('https://ticketazo.com.ar/auth/registerUser')
@@ -70,7 +71,7 @@ it('Registra un nuevo usuario con datos aleatorios', () => {
     cy.completarDatosPersonales('Martina', 'Cejas', '1123256452', '23236459')
     cy.seleccionarUbicacion('Buenos Aires', 'La Plata')
     cy.completarFechaNacimiento('01', '01', '1990')
-    cy.completarEmailYPassword('martinacejas@gmail.com', '12345') // Contraseña inválida
+    cy.completarEmailYPassword('martinacejas@gmail.com', '12345') 
 
     cy.log('Contraseña inválida')
     cy.get('[data-cy="btn-registrarse"]').click()
